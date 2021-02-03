@@ -91,4 +91,4 @@ sudo apt install -y zsh
 chsh -s $(which zsh)
 
 # Finish
-GREEN "Get-Ready finished! Check if there were any errors"
+GREEN "Get-Ready finished! Check if there were any errors and reboot system"
