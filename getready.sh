@@ -30,6 +30,10 @@ fi
 BLUE "Running apt update and apt upgrade..."
 sudo apt update && sudo apt upgrade -y
 
+# curl
+BLUE "Installing curl..."
+sudo apt install -y curl
+
 # Git
 BLUE "Installing Git..."
 sudo apt install -y git
@@ -80,17 +84,7 @@ sudo apt install -y openjdk-14-jdk
 # zsh
 BLUE "Installing zsh..."
 sudo apt install -y zsh
-
-# oh-my-zsh
-BLUE "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# oh-my-zsh plugins
-BLUE "Installing oh-my-zsh plugin: zsh-autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-BLUE "Installing oh-my-zsh plugin: zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+chsh -s $(which zsh)
 
 # Finish
-GREEN "Get-Ready finished! Check if there were any errors."
+GREEN "Get-Ready finished! Check if there were any errors"
