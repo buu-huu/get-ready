@@ -48,9 +48,13 @@ rm code.deb
 BLUE "Installing tmux..."
 sudo apt install -y tmux
 
-# Python
-BLUE "Installing Python..."
-sudo apt install -y pyton
+# Python 2
+BLUE "Installing Python 2..."
+sudo apt install -y python
+
+# Python 3
+BLUE "Installing Python 3..."
+sudo apt install -y python3
 
 # Python Pip
 BLUE "Installing Python Pip..."
